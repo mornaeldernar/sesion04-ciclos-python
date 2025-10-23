@@ -26,7 +26,6 @@ def analizar_ventas(ventas, umbral):
     #    - venta_maxima (la venta más alta)
     #    - ventas_altas (contador de ventas > umbral)
     
-    
     # TODO: Escribe tu código de inicialización aquí
     
     
@@ -35,12 +34,11 @@ def analizar_ventas(ventas, umbral):
     #    - Actualizar venta_maxima si corresponde
     #    - Incrementar ventas_altas si la venta supera el umbral
     
-    
     # TODO: Escribe tu código de procesamiento aquí
     
     
     # 3. Retornar un diccionario con los resultados:
-    #return {
+    #    {
     #        "total": total_ventas,
     #        "maxima": venta_maxima,
     #        "num_ventas_altas": ventas_altas
