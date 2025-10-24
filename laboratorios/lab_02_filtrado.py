@@ -24,8 +24,8 @@ def filtrar_productos(productos, min_precio, max_precio, categoria):
     """
     # TODO: Implementar el filtrado siguiendo estos pasos:
     # 1. Crear una lista vacía para los productos filtrados
-    
     # TODO: Escribe tu código de inicialización aquí
+    productos_filtrados = []
     
     
     # 2. Recorrer la lista de productos y por cada uno:
@@ -35,13 +35,21 @@ def filtrar_productos(productos, min_precio, max_precio, categoria):
     #    Si cumple todos los criterios, agregarlo a la lista filtrada
     
     # TODO: Escribe tu código de filtrado aquí
-    
-    
+    for producto in productos:
+        #precio minimo 20 precio maximo 500
+        #{"nombre": "Monitor", "precio": 300, "stock": 3, "categoria": "Electrónica"}
+        precio_valido = min_precio <= producto['precio'] <= max_precio
+        # 20 <= 300 <= 500  -> True
+        hay_stock = producto['stock'] > 0
+        # 3 > 0 -> True
+        categoria_valida = producto['categoria'] == categoria
+        # "Electrónica" == "Electrónica" -> True
+        if precio_valido and hay_stock and categoria_valida:
+            productos_filtrados.append(producto)
+            # productos_filtrados = [{"nombre": "Mouse", "precio": 25, "stock": 10, "categoria": "Electrónica"},{"nombre": "Monitor", "precio": 300, "stock": 3, "categoria": "Electrónica"}]
     # 3. Retornar la lista de productos filtrados
+    return productos_filtrados
     
-    # Por ahora, lanzamos NotImplementedError para indicar que falta implementar
-    raise NotImplementedError("¡Función no implementada! Debes escribir el código de filtrado.")
-
 def main():
     # Casos de prueba
     productos = [
