@@ -36,6 +36,11 @@ def analizar_ventas(ventas, umbral):
     #    - Sumar cada venta al total
     #    - Actualizar venta_maxima si corresponde
     #    - Incrementar ventas_altas si la venta supera el umbral
+    # [100, 200, 50, 300, 150, 80]
+    # total_ventas = 0 +100+200+50+300+150+80= 880
+    # venta_maxima = 0 -> 100 -> 200 -> 200 -> 300 -> 300 -> 300 = 300
+    # ventas_altas (umbral=150) = 0 -> 0 -> 1 -> 1 -> 2 -> 2 -> 2 = 2
+
     for venta in ventas:
         total_ventas += venta
         if venta > venta_maxima:
